@@ -1,0 +1,4 @@
+    public function FUNCTION()
+    {
+        return Only::index($this, __FUNCTION__, __CLASS__);
+    }

@@ -1,0 +1,10 @@
+<?php
+namespace app\index\controller;
+use app\data\controller\Only;
+class About extends Basehome
+{
+    public function FUNCTION()
+    {
+        return Only::index($this, __FUNCTION__, __CLASS__);
+    }
+}

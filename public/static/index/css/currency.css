@@ -1,0 +1,347 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, ul, li, dl, dd, dt {
+	margin:0;
+	padding:0;
+	border:0;
+	font-family:Microsoft YaHEI;
+	list-style:none;
+	font-weight:normal;
+	font-family:"微软雅黑";
+	font-weight:normal;
+	font-style:normal;
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+	color: #333;
+}
+body, p, form, input, button, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	padding:0;
+	border: 0;
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+select {
+	outline:none;
+	-webkit-appearance:none;
+} /* 清除IOS下按钮原生样式 */
+textarea {
+	resize:none;
+} /* 不允许调整元素宽高 */
+table {
+	border-collapse:collapse;
+}  /* 为表格设置合并边框模型 */
+select{
+	outline:none;
+	border:none;
+	background:none;
+} /* 清除默认样式 */
+a {
+	text-decoration:none;
+	outline:none;
+	cursor:pointer;
+}
+em, i, b {
+	font-style:normal;
+}
+li, ol {
+	list-style:none;
+}
+body {
+	width:100%;
+	margin: 0 auto;
+	background: #fff;
+	color:#333;
+}
+
+body,input, select, textarea ,h1, h2, h3, h4, h5, h6, p, span,a,em,font,ul,li,strong,div{
+	font-family:"微软雅黑";
+    
+}
+/* 修改plachholder颜色 */
+input::-webkit-input-placeholder { /* WebKit browsers */  
+  color: #8f8f8f;  
+}  
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+  color: #8f8f8f;  
+}  
+input::-moz-placeholder { /* Mozilla Firefox 19+ */  
+  color: #8f8f8f;  
+}  
+input:-ms-input-placeholder { /* Internet Explorer 10+ */  
+  color: #8f8f8f;  
+} 
+body,input, select, textarea ,h1, h2, h3, h4, h5, h6, p, span,strong,div{
+	font-family:tahoma,arial,"Microsoft YaHei","微软雅黑";
+}
+
+.tm{
+filter:alpha(opacity=50);  /*支持 IE 浏览器*/
+-moz-opacity:0.50; /*支持 FireFox 浏览器*/
+-khtml-opacity: 0.5; /*webkit内核浏览器*/
+opacity:0.50;  /*支持 Chrome, Opera, Safari 等浏览器*/}
+
+.b_radius{border-radius:50%;}
+
+.family_s{font-family:"宋体";}
+
+.clearfix{*zoom:1;}.clearfix:after{display:block;overflow:hidden;clear:both;height:0;visibility:hidden;content:".";}
+.fl{float:left; display: inline}
+.fr{float:right; display: inline}
+.dsb{display:block;}
+.dsn{display:none;}
+.dw_xd{position:relative;}
+.pointer{cursor:pointer}
+.short {width: 39%!important}
+.long {width: 80%!important}
+.color1{color: #F97B00!important}
+.color2{color: #AD5702!important}
+.color3{color: #D02427!important}
+.color4{color: #FF5A11!important}
+.pr {position: relative;}
+.pa {position: absolute;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

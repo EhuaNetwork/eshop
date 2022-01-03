@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{$system.company}</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/ecms/server/layuiadmin/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/ecms/server/layuiadmin/style/admin.css" media="all">
+</head>
+<body>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">网站设置</div>
+                <div class="layui-card-body" pad15>
+                    <form action="create" method="post">
+                        <div class="layui-form" wid100 lay-filter="">
+                            <input type="hidden" name="i" value="{$i}" class="layui-input" id="img">
+
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">栏目名称</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="name" value="" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">自定义URL</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="nourl" value="" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">T</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="t" value="" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">D</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="d" value="" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">K</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="k" value="" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">置顶值</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="top" value="0" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">MCA</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="m" value="index" class="layui-input" style="width: 30%;float: left">
+                                    <input type="text" name="c" value="{$c}" class="layui-input"  style="width: 30%;float: left">
+                                    <input type="text" name="a" value="index" class="layui-input"  style="width: 30%;float: left">
+                                    <i style="clear: both"></i>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">展示类型</label>
+                                <div class="layui-input-block">
+                                            <input type="radio" name="type" value="2" title="列表页"  checked="">
+                                    <input type="radio" name="type" value="1" title="单页">
+
+                                </div>
+                            </div>
+
+
+                            <div id="div1">
+                            </div>
+                            <textarea id="LAY_demo1" style="display: none" name="body">
+                            </textarea>
+                            <script>
+                                function fff() {
+                                    $('#LAY_demo1').html(editor.txt.html())
+                                }
+                            </script>
+                            <div class="layui-form-item">
+                                <div class="layui-input-block">
+                                    <button class="layui-btn" type="submit" lay-filter="set_website">生成栏目配置</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+　<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<!--3.1.1版本-->
+<style>
+    #alt {float: left;background: #fff;border-radius: 5px;border: 1px solid #9b9b9b;height: 30px;width: 80%;padding-left: 5px;margin-left: 10px;}
+</style>
+<script src="/ecms/wangEditor/wangEditor.js"></script>
+<script>
+
+    // 编辑器公共方法2019-05-31
+    var E = window.wangEditor;
+    var editor = new E('#div1');
+    //开启debug模式
+    editor.customConfig.debug = true;
+    // 关闭粘贴内容中的样式
+    editor.customConfig.pasteFilterStyle = false;
+    // 忽略粘贴内容中的图片
+    editor.customConfig.pasteIgnoreImg = true;
+
+    // editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+
+
+    /* 处理上传图片的controller路径 */
+    editor.customConfig.uploadImgServer = '/api/upload/wangeditor3'; //上传URL
+    editor.customConfig.uploadImgMaxSize = 100 * 1024 * 1024;
+    editor.customConfig.uploadImgMaxLength = 100;
+    editor.customConfig.uploadFileName = 'file';//服务端接收file的名字
+    editor.customConfig.uploadImgHooks = {
+        customInsert: function (insertImg, result, editor) {
+            // 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
+            // insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
+            console.log(result);
+            // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
+            var url =result.data;
+            insertImg(url);
+
+            // result 必须是一个 JSON 格式字符串！！！否则报错
+        }
+    }
+    editor.customConfig.debug = true
+
+
+    editor.customConfig.onchange = function (html) {
+        // 监控变化，同步更新到 textarea
+        $('#LAY_demo1').val(html)
+    }
+    editor.create()
+    // 初始化 textarea 的值
+    $('#LAY_demo1').val(editor.txt.html())
+
+</script>
+
+
+<script src="/ecms/server/layuiadmin/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '/ecms/server/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'set']);
+</script>
+</body>
+</html>

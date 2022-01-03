@@ -1,0 +1,10 @@
+{include file='index@common/tdk'}
+
+{include file='index@common/head'}
+
+{foreach $this_type as $dat}
+<a href="{:eurl($dat.m.'/'.$dat.c.'/'.$dat.a,['t'=>$dat.id])}">{$dat.name}</a>
+{/foreach}
+
+{include file='index@common/foot'}
+
